@@ -139,3 +139,6 @@ h2.holo-text { color: var(--primary-neon); text-shadow: var(--neon-shadow); text
 
 /* Applica concetti simili a Register.vue */
 </style>
+
+git config --global user.email "mrghettone@gmail.com"
+git config --global user.name "Matteo Ghetti"
