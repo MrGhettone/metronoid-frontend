@@ -1,0 +1,55 @@
+/* src/assets/main.css */
+
+/* 1. IMPORTIAMO IL FONT FUTURISTICO */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700&display=swap');
+
+/* 2. DEFINIAMO LE VARIABILI (IL NOSTRO DESIGN SYSTEM) */
+:root {
+  --bg-space: #050509;       /* Nero profondissimo per lo sfondo */
+  --bg-panel: rgba(10, 15, 28, 0.85); /* Blu scuro traslucido per i pannelli */
+
+  --primary-neon: #00f2fe;    /* Cyan Elettrico (Energia/Tech) */
+  --secondary-neon: #4facfe;  /* Blu Neon (Commercio) */
+  --accent-glow: #ff0055;     /* Rosso/Rosa Neon (Avvisi) */
+
+  --text-main: #e0e6ed;       /* Bianco sporco/Grigio chiaro */
+  --text-muted: #94a3b8;      /* Grigio scuro per testi secondari */
+
+  --border-sci-fi: 1px solid rgba(0, 242, 254, 0.3); /* Bordi cyan sottili */
+
+  --neon-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+  --panel-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* 3. RESET GLOBALE E SFONDO SPAZIALE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-radius; /* Gestione corretta dei padding */
+}
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  background-color: var(--bg-space);
+  color: var(--text-main);
+  /* Semplice effetto stellato CSS */
+  background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
+    radial-gradient(white, rgba(255,255,255,.1) 1px, transparent 2px);
+  background-size: 550px 550px, 350px 350px;
+  background-position: 0 0, 40px 60px;
+  min-height: 100vh;
+}
+
+html, body, #app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Evita scrollbar indesiderate se lo sfondo è grande */
+  background-color: #050509; /* Nero profondo */
+  color: #e0e6ed;
+}
+
+/* Rimuoviamo i punti elenco e le sottolineature dai link globalmente */
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; transition: 0.3s; }
