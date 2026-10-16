@@ -1,0 +1,7 @@
+// Mixin per l'effetto Glow (una funzione riutilizzabile)
+@mixin neon-glow($color)
+{
+    border: 1px solid $color;
+    box-shadow: 0 0 10px rgba($color, 0.3), inset 0 0 5px rgba($color, 0.2);
+    text-shadow: 0 0 8px $color;
+}

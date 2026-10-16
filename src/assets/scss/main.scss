@@ -1,0 +1,13 @@
+// 1. Configurazioni (non generano CSS, solo variabili)
+@import "variables";
+@import "mixins";
+
+// 2. Base e Layout (stili globali)
+@import "base";
+@import "layout";
+
+// 3. Componenti (stili specifici)
+@import "./components/navbar";
+@import "./components/forms";
+@import "./components/buttons";
+@import "./components/market";

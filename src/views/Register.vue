@@ -55,10 +55,11 @@ const handleRegister = async () => {
 </script>
 
 <template>
-  <div class="register-container">
-    <div class="register-card">
+  <div class="sci-fi-panel">
+    <div class="panel-header">
       <h2>Crea un account</h2>
       <p class="subtitle">Inizia oggi la tua prova gratuita</p>
+    </div>
 
       <form @submit.prevent="handleRegister">
         <div class="input-group">
@@ -92,7 +93,7 @@ const handleRegister = async () => {
 
         <p v-if="errorMessage" class="error-text">{{ errorMessage }}</p>
 
-        <button type="submit" :disabled="!isFormValid || isLoading" class="btn-register">
+        <button type="submit" :disabled="!isFormValid || isLoading" class="btn-sci-fi">
           <span v-if="!isLoading">Registrati</span>
           <span v-else class="loader"></span>
         </button>
@@ -103,75 +104,8 @@ const handleRegister = async () => {
         <router-link to="/login">Accedi qui</router-link>
       </p>
     </div>
-  </div>
 </template>
 
 <style scoped>
-.register-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100vh - 80px);
-  padding: 20px;
-}
 
-.register-card {
-  background: white;
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  width: 100%;
-  max-width: 450px;
-}
-
-h2 { color: #2c3e50; margin-bottom: 0.5rem; }
-.subtitle { color: #64748b; margin-bottom: 2rem; font-size: 0.9rem; }
-
-.input-group { margin-bottom: 1.2rem; text-align: left; }
-.input-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: #475569; }
-
-input {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-input:focus { outline: none; border-color: #42b883; }
-
-.warning-text { color: #f59e0b; font-size: 0.8rem; margin-top: 0.3rem; }
-.error-text { color: #ef4444; font-size: 0.85rem; margin-bottom: 1rem; }
-
-.btn-register {
-  width: 100%;
-  padding: 0.8rem;
-  background-color: #42b883;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 1rem;
-}
-
-.btn-register:disabled {
-  background-color: #cbd5e1;
-  cursor: not-allowed;
-}
-
-.footer-text { margin-top: 1.5rem; font-size: 0.9rem; color: #64748b; }
-.footer-text a { color: #42b883; text-decoration: none; font-weight: bold; }
-
-.loader {
-  border: 2px solid #f3f3f3;
-  border-top: 2px solid #ffffff;
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
-  animation: spin 1s linear infinite;
-  display: inline-block;
-}
-@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 </style>

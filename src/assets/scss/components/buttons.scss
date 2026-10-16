@@ -1,0 +1,60 @@
+/* Bottone */
+.btn-sci-fi
+{
+    width: 100%;
+    padding: 0.9rem;
+    background: transparent;
+    border: 1px solid $neon-cyan;
+    color: $neon-cyan;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-sci-fi:hover
+{
+    background: #00f2fe;
+    color: #050509;
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.7);
+}
+
+/* Bottone Olografico (solo bordo e testo) */
+.btn-holo
+{
+    border: 1px solid var($secondary-neon);
+    color: var($secondary-neon) !important;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background: transparent;
+}
+
+.btn-holo:hover
+{
+    background: rgba(79, 172, 254, 0.1);
+    box-shadow: 0 0 10px rgba(79, 172, 254, 0.3);
+}
+
+/* Bottone Neon Pieno (Cyan brillante) */
+.btn-neon
+{
+    background-color: var($primary-neon);
+    color: var($bg-space) !important;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: var($neon-shadow);
+}
+.btn-neon:hover
+{
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.8);
+}
+
+/* Pulsanti speciali */
+.btn-register
+{
+    background-color: $neon-cyan;
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}

@@ -1,0 +1,102 @@
+
+/* 3. RESET GLOBALE E SFONDO SPAZIALE */
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-radius; /* Gestione corretta dei padding */
+}
+
+body
+{
+  font-family: 'Exo 2', sans-serif;
+  background-color: $bg-space;
+  color: $text-main;
+  /* Semplice effetto stellato CSS */
+  background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
+    radial-gradient(white, rgba(255,255,255,.1) 1px, transparent 2px);
+  background-size: 550px 550px, 350px 350px;
+  background-position: 0 0, 40px 60px;
+  min-height: 100vh;
+}
+
+html, body, #app
+{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Evita scrollbar indesiderate se lo sfondo è grande */
+  background-color: #050509; /* Nero profondo */
+  color: #e0e6ed;
+}
+
+#app-layout
+{
+    display: flex;
+    flex-direction: column; /* Dispone Navbar in alto, Main sotto */
+    height: 100vh; /* Forza l'altezza a 100% dell'altezza dello schermo */
+    position: relative;
+}
+
+/* Sfondo a griglia opzionale visto nell'immagine */
+.sci-fi-grid
+{
+    background-image: linear-gradient(rgba(0, 242, 254, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0, 242, 254, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* Stile barrette hamburger scure/cyan */
+.sci-fi-bar
+{
+    background-color: $primary-neon !important;
+    box-shadow: $neon-shadow;
+}
+
+/* Il contenitore del contenuto principale */
+.content-container
+{
+    flex: 1; /* Occupa tutto lo spazio rimanente sotto la navbar */
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center;     /* Centra verticalmente */
+    padding: 20px;
+    position: relative;
+}
+
+.holo-text
+{
+    color: var($primary-neon);
+    text-shadow: var($neon-shadow);
+    letter-spacing: 2px;
+
+    .em
+    {
+        color: white;
+        font-weight: 300;
+    }
+}
+
+a
+{
+    text-decoration: none;
+    // color: $neon-cyan;
+    color: $text-muted;
+    transition: 0.3s;
+    // font-weight: 500;
+    font-weight: bold;
+    transition: color 0.3s;
+
+    &:hover
+    {
+        color: $neon-cyan;
+        text-shadow: $neon-shadow;
+    }
+}
+
+/* Rimuoviamo i punti elenco e le sottolineature dai link globalmente */
+ul
+{
+    list-style: none;
+}
